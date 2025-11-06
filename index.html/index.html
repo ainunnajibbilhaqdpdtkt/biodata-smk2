@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Pelajar SMK | Rafi Pratama</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; scroll-behavior:smooth; }
+    body { background: linear-gradient(120deg, #89f7fe, #66a6ff); color:#333; transition: all 0.4s ease; }
+
+    /* === NAVBAR === */
+    nav { position: fixed; top:0; left:0; width:100%; background:#ffffffaa; backdrop-filter:blur(10px); box-shadow:0 4px 12px rgba(0,0,0,0.1); display:flex; justify-content:space-between; align-items:center; padding:10px 40px; z-index:10; }
+    nav h1 { font-size:22px; color:#0066ff; }
+    nav ul { list-style:none; display:flex; }
+    nav ul li { margin-left:20px; }
+    nav ul li a { text-decoration:none; color:#333; font-weight:500; padding:6px 12px; border-radius:6px; transition:0.3s; }
+    nav ul li a:hover { background:#66a6ff; color:#fff; }
+    #modeToggle { background:#0066ff; color:#fff; border:none; border-radius:6px; padding:6px 12px; cursor:pointer; transition:0.3s; }
+    #modeToggle:hover { background:#333; }
+
+    /* === SECTIONS === */
+    section { min-height:100vh; padding:100px 10%; display:flex; flex-direction:column; justify-content:center; animation: fadeUp 1s ease forwards; opacity:0; }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+
+    /* === HOME === */
+    #home { text-align:center; background: linear-gradient(120deg, #66a6ff, #89f7fe); color:#fff; animation-delay:0.2s; }
+    #home img { width:180px; height:180px; border-radius:50%; border:5px solid #fff; margin-bottom:15px; object-fit:cover; transition: transform 0.4s ease; }
+    #home img:hover { transform:scale(1.1); }
+
+    /* === ABOUT === */
+    #about h2, #skills h2, #hobbies h2, #gallery h2, #contact h2 { color:#0066ff; margin-bottom:15px; text-align:center; }
+    #about p { text-align:justify; line-height:1.8; font-size:15px; }
+
+    /* === SKILLS === */
+    #skills { background:#f5f9ff; animation-delay:0.4s; }
+    .skill-box { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
+    .skill { background:#fff; padding:12px 20px; border-radius:20px; box-shadow:0 3px 10px rgba(0,0,0,0.1); color:#0066ff; transition:0.3s; }
+    .skill:hover { background:#0066ff; color:#fff; transform:scale(1.1); }
+
+    /* === HOBBIES === */
+    #hobbies { background:#fff; border-top:3px solid #0066ff; animation-delay:0.6s; }
+    .hobby-box { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
+    .hobby { background:#66a6ff; color:#fff; padding:15px 25px; border-radius:25px; transition: all 0.3s; }
+    .hobby:hover { background:#89f7fe; color:#333; transform:translateY(-5px); }
+
+    /* === GALLERY === */
+    #gallery { background:#f5f9ff; animation-delay:0.7s; }
+    .gallery-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; margin-top:20px; }
+    .gallery-container img { width:100%; border-radius:12px; cursor:pointer; transition:0.3s; }
+    .gallery-container img:hover { transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+
+    /* === CONTACT === */
+    #contact { text-align:center; animation-delay:0.8s; }
+    #contact p { margin:5px 0; }
+
+    footer { text-align:center; background:#0066ff; color:#fff; padding:12px; font-size:13px; }
+
+    /* === DARK MODE === */
+    body.dark { background:#111; color:#eee; }
+    body.dark nav { background:#111a; }
+    body.dark #skills, body.dark #gallery { background:#222; }
+    body.dark .skill { background:#333; color:#fff; }
+    body.dark .skill:hover { background:#89f7fe; color:#000; }
+    body.dark .hobby { background:#444; color:#fff; }
+    body.dark .hobby:hover { background:#89f7fe; color:#000; }
+
+    @media (max-width:700px){ nav { flex-direction:column; } nav ul { flex-wrap:wrap; justify-content:center; margin:10px 0; } #home img { width:130px; height:130px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>Biodata SMK</h1>
+  <ul>
+    <li><a href="#home">Beranda</a></li>
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#skills">Keahlian</a></li>
+    <li><a href="#hobbies">Hobi</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+  <button id="modeToggle">?? Mode Gelap</button>
+</nav>
+
+<section id="home">
+  <img src="foto-saya.jpg" alt="Foto Saya">
+  <h2>Ainun Najib Bilhaq Dahlan Putra</h2>
+  <p>Pelajar SMK Negeri 5 Jember | Teknik Komputer dan Jaringan</p>
+</section>
+
+<section id="about">
+  <h2>Tentang Saya</h2>
+  <p>
+    Halo! Nama saya <strong>Ainun Najib Bilhaq Dahlan Putra</strong>, seorang pelajar SMK Negeri 5 Jember jurusan Teknik Komputer dan Jaringan (TKJ). 
+    Sejak duduk di bangku sekolah menengah, saya sudah memiliki minat yang besar terhadap teknologi, khususnya dalam bidang pemrograman dan pengembangan website. 
+    Saya senang belajar hal-hal baru, mulai dari membuat desain antarmuka yang menarik, mengembangkan aplikasi sederhana, hingga memahami logika pemrograman dengan bahasa seperti HTML, CSS, JavaScript, dan Python.  
+  </p>
+  <p>
+    Selain belajar di kelas, saya aktif mengikuti berbagai kegiatan ekstrakurikuler yang mendukung pengembangan keterampilan teknis dan soft skills, seperti komunitas coding, lomba desain, dan workshop teknologi. 
+    Kegiatan ini membantu saya menjadi lebih disiplin, kreatif, dan mampu bekerja sama dalam tim.  
+  </p>
+  <p>
+    Saya juga memiliki berbagai minat dan hobi yang memperkaya pengalaman pribadi saya, seperti bermain futsal, serta mendengarkan musik dan ngopi. 
+    Hobi-hobi ini tidak hanya menjadi sarana hiburan, tetapi juga mengasah kreativitas dan imajinasi saya.  
+  </p>
+  <p>
+    Cita-cita saya adalah menjadi seorang <strong>Web Developer profesional</strong> yang mampu menciptakan aplikasi dan website berkualitas tinggi, serta ikut berkontribusi dalam pengembangan teknologi di Indonesia. 
+    Saya percaya bahwa dengan kerja keras, pembelajaran yang konsisten, dan kreativitas, saya dapat mewujudkan impian tersebut.  
+  </p>
+  <p>
+    Singkatnya, saya adalah seorang pelajar yang berdedikasi, penuh semangat, kreatif, dan selalu ingin belajar hal-hal baru. 
+    Saya berharap melalui website biodata ini, orang lain dapat lebih mengenal saya, baik dari sisi akademik, keterampilan, maupun hobi dan minat pribadi.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Keahlian Saya</h2>
+  <div class="skill-box">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">UI/UX Design</div>
+    <div class="skill">Canva</div>
+    <div class="skill">Editing Video</div>
+    <div class="skill">Python Dasar</div>
+  </div>
+</section>
+
+<section id="hobbies">
+  <h2>Hobi dan Minat</h2>
+  <div class="hobby-box">
+    <div class="hobby">Bermain Sepakbola</div>
+    <div class="hobby">Coding</div>
+    <div class="hobby">Mendengarkan Musik</div>
+    <div class="hobby">Street Hooligans</div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Galeri Foto</h2>
+  <div class="gallery-container">
+    <img src="foto2.jpg" alt="My Self 2">
+    <img src="foto3.jpg" alt="My Self 3">
+    <img src="foto4.jpg" alt="My Self 4">
+    <img src="foto5.jpg" alt="My Self 5">
+    <img src="foto6.jpg" alt="My Self 6">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontak Saya</h2>
+  <p><strong>Email:</strong> billybilhaq123@gmail.com</p>
+  <p><strong>Instagram:</strong> @bill.nmmercc_</p>
+  <p><strong>No. HP:</strong> 0896-5460-8822</p>
+</section>
+
+<footer>
+  &copy; 2025 | Website Biodata Pelajar SMK - Ainun Najib Bilhaq Dahlan Putra
+</footer>
+
+<script>
+  // Dark Mode Toggle
+  const toggle = document.getElementById('modeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent = document.body.classList.contains('dark') ? '?? Mode Terang' : '?? Mode Gelap';
+  });
+
+  // Animasi scroll
+  const sections = document.querySelectorAll("section");
+  const reveal = () => {
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(sec => { const top = sec.getBoundingClientRect().top; if(top<trigger) sec.style.opacity=1; });
+  };
+  window.addEventListener("scroll", reveal);
+  reveal();
+</script>
+
+</body>
+</html>
